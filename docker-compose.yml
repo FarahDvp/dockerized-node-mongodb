@@ -1,0 +1,15 @@
+version: "2.22"
+services:
+  post-crud:
+    container_name: post-crud
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3000"
+
+  mongodb:
+    image: mongo:latest
+    container_name: my-mongodb
+    ports:
+      - "27018:27017"
